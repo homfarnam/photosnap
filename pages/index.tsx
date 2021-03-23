@@ -1,14 +1,11 @@
-import Link from 'next/link'
-import Layout from '../components/Layout'
+import Button from "../components/Button/Button"
+import Layout from "../components/Layout"
 
 const IndexPage = () => (
-  <Layout title="Home | Next.js + TypeScript Example">
-    <h1>Hello Next.js 👋</h1>
-    <p>
-      <Link href="/about">
-        <a>About</a>
-      </Link>
-    </p>
+  <Layout title="Photosnap">
+    <div className="w-full h-full flex items-center justify-center">
+      <Button text="Button 1" theme="white" />
+    </div>
   </Layout>
 )
 
