@@ -1,5 +1,6 @@
 import Layout from "../components/Layout"
 import PhotoStoryCard from "../components/PhotoStoryCard/PhotoStoryCard"
+import StoryCard from "../components/StoryCard/StoryCard"
 
 const IndexPage = () => {
   return (
@@ -13,6 +14,7 @@ const IndexPage = () => {
           reverse={false}
           bg="black"
         />
+
         <PhotoStoryCard
           image="/laptop.png"
           title="BEAUTIFUL STORIES EVERY TIME"
@@ -28,6 +30,12 @@ const IndexPage = () => {
           reverse={false}
           bg="white"
         />
+        <div className="h-[4000px] md:h-[1000px] lg:h-[500px] grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4">
+          <StoryCard title="The Mountains" author="by John Appleseed" image="/mountain.png" />
+          <StoryCard title="Sunset Cityscapes" author="by Benjamin Cruz" image="/city.png" />
+          <StoryCard title="18 Days Voyage" author="by Alexei Borodin" image="/walking.png" />
+          <StoryCard title="Architecturals" author="by Samantha Brooke" image="/building.png" />
+        </div>
       </Layout>
     </>
   )
