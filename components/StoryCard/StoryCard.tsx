@@ -9,7 +9,7 @@ interface StoryCardProps {
 
 const StoryCard: React.FC<StoryCardProps> = ({ title, author, image }) => {
   return (
-    <div className="w-full h-auto relative">
+    <div className="w-full h-auto relative hover:mb-10 transition-all duration-200">
       <Image
         src={image}
         layout="fill"
