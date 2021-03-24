@@ -38,7 +38,7 @@ const Header: React.FC<HeaderProps> = () => {
   })
   return (
     <>
-      <header className="md:w-full w-11/12 mx-auto flex dark:bg-black  text-black dark:text-white items-center justify-between md:mx-auto md:justify-around h-[72px]">
+      <header className="md:w-full py-2 w-11/12 mx-auto flex dark:bg-black  text-black dark:text-white items-center justify-between md:mx-auto md:justify-around h-[72px]">
         <div className="flex w-[200px]">
           <Logo />
         </div>
