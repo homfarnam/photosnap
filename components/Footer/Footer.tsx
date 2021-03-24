@@ -18,13 +18,33 @@ const Nav = styled.nav`
 const Footer: React.FC<FooterProps> = () => {
   const size: number = useWindowSize()
   return (
-    <footer className="h-[250px] py-5 text-white bg-black flex flex-row justify-between w-full">
-      <div className="flex lg:flex-row justify-center">
-        <div className="flex flex-col h-auto w-1/2 ml-52 justify-between">
-          <div className="flex h-[16px] mt-5 z-30">
+    <footer className="md:h-[250px] h-auto py-5 text-white bg-black flex flex-col md:flex-row items-center md:items-stretch md:justify-between w-full">
+      <div className="flex flex-col w-full md:w-auto lg:flex-row justify-center">
+        <div className="flex flex-col h-full w-full md:w-1/2 md:ml-52 justify-between space-y-10 md:space-y-0">
+          <div className="flex md:w-auto w-full justify-center h-[16px] mt-5 z-30 order-1">
             <Logo theme="white" />
           </div>
-          <div className="flex justify-start w-[180px]">
+          {size < 1024 && (
+            <div className="h-full md:mx-10 md:w-auto w-full justify-center flex order-3 md:order-2">
+              <Nav className="flex flex-col md:flex-row lg:flex-col font-bold justify-around items-center h-full">
+                <Link href="/">
+                  <a>Home</a>
+                </Link>
+                <Link href="/">
+                  <a>STORIES</a>
+                </Link>
+
+                <Link href="/about">
+                  <a>FEATURES</a>
+                </Link>
+
+                <Link href="/users">
+                  <a>PRICING</a>
+                </Link>
+              </Nav>
+            </div>
+          )}
+          <div className="flex md:w-auto w-7/12 mx-auto justify-center md:justify-start md:w-[180px] order-2 md:order-3">
             <div className="flex justify-around w-full">
               <div className="w-[20px] h-[20px]">
                 <Image src="/facebook.svg" layout="responsive" width="20" height="20" />
@@ -44,27 +64,29 @@ const Footer: React.FC<FooterProps> = () => {
             </div>
           </div>
         </div>
-        <div className="h-full mx-10">
-          <Nav className="flex flex-row lg:flex-col font-bold justify-around items-center h-full">
-            <Link href="/">
-              <a>Home</a>
-            </Link>
-            <Link href="/">
-              <a>STORIES</a>
-            </Link>
+        {size > 1024 && (
+          <div className="h-full mx-10 order-2">
+            <Nav className="flex flex-row lg:flex-col font-bold justify-around items-center h-full">
+              <Link href="/">
+                <a>Home</a>
+              </Link>
+              <Link href="/">
+                <a>STORIES</a>
+              </Link>
 
-            <Link href="/about">
-              <a>FEATURES</a>
-            </Link>
+              <Link href="/about">
+                <a>FEATURES</a>
+              </Link>
 
-            <Link href="/users">
-              <a>PRICING</a>
-            </Link>
-          </Nav>
-        </div>
+              <Link href="/users">
+                <a>PRICING</a>
+              </Link>
+            </Nav>
+          </div>
+        )}
       </div>
-      <div className="w-1/2">
-        <div className="flex flex-col justify-between items-end w-9/12 h-full">
+      <div className="md:w-1/2 w-full flex md:flex-row flex-col items-center md:items-stretch">
+        <div className="flex flex-col justify-center md:justify-between items-center md:items-end w-9/12 md:space-y-0 space-y-5 md:space-y-0 mt-10 md:mt-0 h-full">
           <Button text="GET AN INVITE" arrow="white" />
 
           <p className="text-white opacity-30">Copyright 2019. All Rights Reserved</p>
