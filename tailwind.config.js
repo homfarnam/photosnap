@@ -1,8 +1,9 @@
 const { fontFamily } = require("tailwindcss/defaultTheme")
 
 module.exports = {
-  purge: ["./public/**/*.html", "./components/**/*.{js,jsx,ts,tsx}"],
+  purge: ["./pages/**/*.{js,jsx,ts,tsx}", "./components/**/*.{js,jsx,ts,tsx}"],
   darkMode: "class", // or 'media' or 'class'
+
   theme: {
     extend: {
       fontFamily: {
@@ -13,5 +14,9 @@ module.exports = {
   variants: {
     extend: {}
   },
-  plugins: []
+  plugins: [require("@tailwindcss/aspect-ratio")],
+  future: {
+    removeDeprecatedGapUtilities: true,
+    purgeLayersByDefault: true
+  }
 }
