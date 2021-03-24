@@ -47,7 +47,13 @@ const Footer: React.FC<FooterProps> = () => {
           <div className="flex md:w-auto w-7/12 mx-auto justify-center md:justify-start md:w-[180px] order-2 md:order-3">
             <div className="flex justify-around w-full">
               <div className="w-[20px] h-[20px]">
-                <Image src="/facebook.svg" layout="responsive" width="20" height="20" />
+                <Image
+                  src="/facebook.svg"
+                  layout="responsive"
+                  width="20"
+                  height="20"
+                  className="hover:bg-blue-800"
+                />
               </div>
               <div className="w-[20px] h-[20px]">
                 <Image src="/youtube.svg" layout="responsive" width="20" height="20" />
