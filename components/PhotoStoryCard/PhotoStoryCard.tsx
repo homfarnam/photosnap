@@ -19,13 +19,19 @@ const PhotoStoryCard: React.FC<PhotoStoryCardProps> = ({ image, reverse, title, 
               bg == "black" ? "text-white" : "text-black"
             } order-2 md:order-none`}>
             <div className="w-1/2 flex flex-col justify-start items-start mx-auto py-16 md:py-0 space-y-5">
-              <h3 className="uppercase text-3xl">{title}</h3>
-              <p className="opacity-60">{desc}</p>
-              {bg == "white" ? (
-                <Button text="GET AN INVITE" arrow="black" />
-              ) : bg == "black" ? (
-                <Button text="GET AN INVITE" arrow="white" />
-              ) : null}
+              <h3 className="uppercase text-3xl animate__animated animate__fadeInUp animate__delay-2s">
+                {title}
+              </h3>
+              <p className="opacity-60 animate__animated animate__fadeInUp animate__delay-3s">
+                {desc}
+              </p>
+              <div className="animate__animated animate__fadeInUp animate__delay-4s">
+                {bg == "white" ? (
+                  <Button text="GET AN INVITE" arrow="black" />
+                ) : bg == "black" ? (
+                  <Button text="GET AN INVITE" arrow="white" />
+                ) : null}
+              </div>
             </div>
           </div>
           <div className="w-full md:w-4/12 lg:w-7/12 h-full items-center flex order-1 md:order-none">
@@ -50,13 +56,19 @@ const PhotoStoryCard: React.FC<PhotoStoryCardProps> = ({ image, reverse, title, 
               bg == "black" ? "text-white" : "text-black"
             } order-2 md:order-none`}>
             <div className="w-1/2 flex flex-col justify-start items-start mx-auto py-16 md:py-0 space-y-5">
-              <h3 className="uppercase text-3xl">{title}</h3>
-              <p className="opacity-60">{desc}</p>
-              {bg == "white" ? (
-                <Button text="GET AN INVITE" arrow="black" />
-              ) : bg == "black" ? (
-                <Button text="GET AN INVITE" arrow="white" />
-              ) : null}
+              <h3 className="uppercase text-3xl animate__animated animate__fadeInUp animate__delay-2s">
+                {title}
+              </h3>
+              <p className="opacity-60 animate__animated animate__fadeInUp animate__delay-3s">
+                {desc}
+              </p>
+              <div className="animate__animated animate__fadeInUp animate__delay-4s">
+                {bg == "white" ? (
+                  <Button text="GET AN INVITE" arrow="black" />
+                ) : bg == "black" ? (
+                  <Button text="GET AN INVITE" arrow="white" />
+                ) : null}
+              </div>
             </div>
           </div>
         </>
