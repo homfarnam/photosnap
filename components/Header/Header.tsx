@@ -48,15 +48,15 @@ const Header: React.FC<HeaderProps> = () => {
           <>
             <div className="w-auto">
               <Nav className="flex justify-around w-full font-bold">
-                <Link href="/">
+                <Link href="/stories">
                   <a>STORIES</a>
                 </Link>
 
-                <Link href="/about">
+                <Link href="/features">
                   <a>FEATURES</a>
                 </Link>
 
-                <Link href="/users">
+                <Link href="/pricing">
                   <a>PRICING</a>
                 </Link>
               </Nav>
