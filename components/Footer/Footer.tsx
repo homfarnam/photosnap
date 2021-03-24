@@ -18,7 +18,7 @@ const Nav = styled.nav`
 const Footer: React.FC<FooterProps> = () => {
   const size: number = useWindowSize()
   return (
-    <footer className="md:h-[250px] h-auto py-5 text-white bg-black flex flex-col md:flex-row items-center md:items-stretch md:justify-between w-full">
+    <footer className="md:h-[250px] relative z-50 bottom-0 h-auto py-5 text-white bg-black flex flex-col md:flex-row items-center md:items-stretch md:justify-between w-full">
       <div className="flex flex-col w-full md:w-auto lg:flex-row justify-center">
         <div className="flex flex-col h-full w-full md:w-1/2 md:ml-52 justify-between space-y-10 md:space-y-0">
           <div className="flex md:w-auto w-full justify-center h-[16px] mt-5 z-30 order-1">
