@@ -7,7 +7,7 @@ interface MobileMenuProps {}
 
 const MobileMenu: React.FC<MobileMenuProps> = () => {
   return (
-    <div className="w-full h-[253px] bg-white flex flex-col justify-between py-3 absolute top-12 border-b-2">
+    <div className="w-full h-[253px] bg-white flex flex-col justify-between py-3 absolute md:top-12 border-b-2">
       <div className="w-auto mt-5">
         <Nav className="flex flex-col items-center space-y-2 w-full font-bold">
           <Link href="/">
