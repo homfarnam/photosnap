@@ -1,8 +1,6 @@
-import Image from "next/image"
 import Link from "next/link"
 import { useEffect, useState } from "react"
 import { useCookies } from "react-cookie"
-import styled from "styled-components"
 import useWindowSize from "../../hooks/useWindowSize"
 import { Nav } from "../../styles/styled"
 import Button from "../Button/Button"
@@ -14,7 +12,6 @@ interface HeaderProps {}
 
 const Header: React.FC<HeaderProps> = () => {
   const [cookies, setCookie] = useCookies(["theme"])
-  const [mainTheme, setMainTheme] = useState<any>("light")
   const [open, setOpen] = useState<boolean>(false)
 
   const size: number = useWindowSize()
@@ -27,12 +24,10 @@ const Header: React.FC<HeaderProps> = () => {
         html?.classList.add("dark")
         localStorage.setItem("theme", "dark")
         setCookie("theme", "dark", { path: "/" })
-        setMainTheme(localStorage.getItem("theme"))
       } else {
         html?.classList.remove("dark")
         localStorage.setItem("theme", "light")
         setCookie("theme", "light", { path: "/" })
-        setMainTheme(localStorage.getItem("theme"))
       }
     }
 
