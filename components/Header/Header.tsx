@@ -90,7 +90,7 @@ const Header: React.FC<HeaderProps> = () => {
         ) : null}
       </header>
       {open && (
-        <div className="transition-opacity duration-300 delay-100 ease-in-out">
+        <div className="transition-opacity duration-300 delay-100 ease-in-out z-20">
           <MobileMenu />
         </div>
       )}
