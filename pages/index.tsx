@@ -1,3 +1,4 @@
+import FeaturesCard from "../components/FeaturesCard/FeaturesCard"
 import Layout from "../components/Layout"
 import PhotoStoryCard from "../components/PhotoStoryCard/PhotoStoryCard"
 import StoryCard from "../components/StoryCard/StoryCard"
@@ -35,6 +36,27 @@ const IndexPage = () => {
           <StoryCard title="Sunset Cityscapes" author="by Benjamin Cruz" image="/city.png" />
           <StoryCard title="18 Days Voyage" author="by Alexei Borodin" image="/walking.png" />
           <StoryCard title="Architecturals" author="by Samantha Brooke" image="/building.png" />
+        </div>
+
+        <div className="w-full flex flex-col md:flex-row flex-wrap justify-center items-center py-20 space-y-7">
+          <FeaturesCard
+            title="100% Responsive"
+            desc="No matter which the device you’re on, our site is fully responsive and stories look
+              beautiful on any screen."
+            image="/responsive.svg"
+          />
+          <FeaturesCard
+            title="No Photo Upload Limit"
+            desc="Our tool has no limits on uploads or bandwidth. Freely upload in bulk and share all of
+          your stories in one go."
+            image="/forever.svg"
+          />
+          <FeaturesCard
+            title="Available to Embed"
+            desc="Embed Tweets, Facebook posts, Instagram media, Vimeo or YouTube videos, Google Maps,
+          and more."
+            image="/embed.svg"
+          />
         </div>
       </Layout>
     </>
