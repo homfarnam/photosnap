@@ -1,7 +1,5 @@
-import Image from "next/image"
 import * as React from "react"
 import BetaNews from "../components/BetaNews/BetaNews"
-import Button from "../components/Button/Button"
 import FeaturesCard from "../components/FeaturesCard/FeaturesCard"
 import Layout from "../components/Layout"
 import PhotoStoryCard from "../components/PhotoStoryCard/PhotoStoryCard"

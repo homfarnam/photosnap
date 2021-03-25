@@ -1,12 +1,10 @@
 import Layout from "../components/Layout"
 import StoryCard from "../components/StoryCard/StoryCard"
 import StorySlide from "../components/StorySlide/StorySlide"
-import useWindowSize from "../hooks/useWindowSize"
 
 interface StoriesProps {}
 
 const Stories: React.FC<StoriesProps> = () => {
-  const size: number = useWindowSize()
   return (
     <Layout title="Photosnap | Stories">
       <StorySlide />
